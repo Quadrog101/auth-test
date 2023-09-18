@@ -1,0 +1,157 @@
+img {
+    display: block;
+    width: 100%;
+}
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 100vh;
+    padding: 16px;
+}
+.container-auth{
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.display-border{
+    display: flex;
+    gap: 8px;
+}
+.display-border:last-child{
+    align-items: flex-end;
+}
+.display-border:first-child .strip{
+    margin-top: 4px;
+}
+.display-border:last-child .strip{
+    margin-bottom: 4px;
+}
+
+.strip{
+    background-color: #CFAA59;
+    width: 100%;
+    height: 1px;
+}
+.strip-vertical{
+    background-color: #CFAA59;
+    width: 1px;
+    height: 100%;
+}
+.strip-vertical:first-child {
+    margin-left: 4px;
+}
+.strip-vertical:last-child {
+    margin-right: 4px;
+}
+
+
+.auth{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 457px;
+    margin-bottom: 40px;
+}
+.auth-success{
+    display: none;
+}
+.auth__header__img{
+    width: 45%;
+    margin: 0 auto;
+}
+.auth__header__label{
+    color: var(--unnamed, #363636);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    text-align: center;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.auth__footer{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.auth__footer__input{
+    display: flex;
+    padding: 11px;
+    align-items: center;
+    gap: 11px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+.auth__footer__input-textbox{
+    width: 100%;
+}
+.auth__footer__input-textbox::placeholder{
+    color: rgba(0, 0, 0, 0.15);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 128.571% */
+}
+.auth__footer__warning{
+    display: none;
+    color: #F65454;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 16px;
+}
+.auth__footer__submit{
+    margin: 0 auto;
+    padding: 16px 24px;
+    width: 175px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #B7903B 0%, #CFAA59 100%);
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.preloader {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.30);
+    z-index: 1001;
+}
+.preloader__image {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin-top: -35px;
+    margin-left: -35px;
+    text-align: center;
+    animation: preloader-rotate 2s infinite linear;
+}
+@keyframes preloader-rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+}
+.load {
+    display: unset;
+    transition: 1s opacity;
+    opacity: 1;
+}

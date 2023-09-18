@@ -1,0 +1,24 @@
+@media (max-width: 1600px) {
+    .auth{
+        width: 335px;
+    }
+    .auth__header__label{
+        font-size: 26px;
+    }
+    .auth__footer__input{
+        padding: 7px;
+    }
+    .auth__footer__submit{
+        padding: 12px 24px;
+    }
+}
+@media (max-width: 500px) {
+    .auth{
+        width: 300px;
+    }
+}
+@media (max-width: 400px) {
+    .auth{
+        width: 260px;
+    }
+}
